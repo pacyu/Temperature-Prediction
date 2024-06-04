@@ -49,8 +49,8 @@ BATCH_SIZE = 3
 LR = 0.001
 
 ct_data = Data()
-x_test = np.loadtxt('X.txt').astype(np.float32)
-y_test = np.loadtxt('Y.txt').astype(np.float32)
+x_test = np.loadtxt('校验数据/校核-输入-影响因素.txt').astype(np.float32)
+y_test = np.loadtxt('校验数据/校核-对比-实际温度.txt').astype(np.float32)
 x_test = x_test / x_test.max(axis=0)
 base_mean = y_test.mean(axis=0)
 train_loader = DataLoader(ct_data, batch_size=BATCH_SIZE, shuffle=True)
